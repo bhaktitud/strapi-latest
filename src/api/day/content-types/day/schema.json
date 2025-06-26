@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "days",
+  "info": {
+    "singularName": "day",
+    "pluralName": "days",
+    "displayName": "Day"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::task.task",
+      "mappedBy": "day"
+    }
+  }
+}
